@@ -10,7 +10,7 @@
 
     const taskTitle = document.createElement("div");
     taskTitle.className = "task__title";
-    taskTitle.textContent = number;
+    taskTitle.textContent = text;
 
     const removeLink = document.createElement("a");
     removeLink.href = "#";
@@ -26,8 +26,9 @@
     })
  }
 
- taskForm.addEventListener('submit', () => {
-    if(input.value.length > 0) {
+ taskForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if(input.value.trim().length > 0) {
         createText(input.value);
         input.value = "";
     }

@@ -12,7 +12,7 @@ tooltips.forEach(tooltip => {
     tooltipElement.style.top = `${tooltipPosition.bottom}px`;
     tooltipElement.style.left = `${tooltipPosition.left}px`;
 
-    tooltipElement.classList.add('tooltip_active');
+    tooltipElement.classList.toggle('tooltip_active');
   });
 });
 
